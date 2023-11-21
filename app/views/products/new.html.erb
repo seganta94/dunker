@@ -5,6 +5,7 @@
   <%= f.input :condition, collection: Product::CONDITION %>
   <%= f.input :price %>
   <%= f.input :description %>
+  <%= f.input :sport, collection: Product::SPORTS %>
   <%= f.input :photo, as: :file %>
   <%= f.button :submit %>
 <% end %>
