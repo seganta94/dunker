@@ -9,12 +9,11 @@ class SalesController < ApplicationController
 
   def create
     @sale = Sale.new(sales_params)
-    @sale.user_id = @user
-
+    @sale.user = current_user
 
 
       if sale.save
-        redirect_to product_path, notice: "Compra efetuada"
+        # redirect_to "indexdasminhascompras"_path("com o que?"), notice: "Compra efetuada"
       else
         notice: "Erro na compra # escolher um caminho para redirecionar"
       end
