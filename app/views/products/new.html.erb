@@ -1,7 +1,8 @@
 <%= simple_form_for @product do |f| %>
   <%= f.input :name %>
-  <%= f.input :category %>
-  <%= f.input :brand %>
+  <%= f.association :category %>
+  <%= f.association :brand %>
+  <%= f.association :condition %>
   <%= f.input :price %>
   <%= f.input :description %>
   <%= f.input :photo, as: :file %>
