@@ -5,5 +5,12 @@
     <div>Imagem fixa</div>
   <% end %>
   <h1><%= @product.name %></h1>
+  <p><%= @product.brand %></p>
+  <p><%= @product.condition %></p>
+  <p><%= @product.description %></p>
   <h3><%= @product.price %></h3>
 </div>
+
+<%# link_to 'Delete Item', product_path %>
+<%= link_to 'Update Item', edit_product_path(@product), class: 'btn btn-primary' %>
+<%= link_to 'Back to all products', products_path %>

@@ -12,6 +12,6 @@ class Product < ApplicationRecord
   validates :brand, presence: true, inclusion: { in: BRANDS }
   validates :condition, presence: true, inclusion: { in: CONDITION }
   validates :price, presence: true, numericality: { greater_than: 0 }
-  validates :description, presence: true,  length: { maximum: 150 }
+  validates :description, presence: true, length: { maximum: 150 }
   validates :sport, presence: true, inclusion: { in: SPORTS }
 end

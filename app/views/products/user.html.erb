@@ -1,5 +1,3 @@
-
-
 <div>
   <% @products.each do |product| %>
   <%= link_to product_path(product) do %>
@@ -11,6 +9,3 @@
   <% end %>
 
 </div>
-
-<button><%= link_to 'Create a product', new_product_path %>
-</button>
