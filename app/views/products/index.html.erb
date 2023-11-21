@@ -1,7 +1,14 @@
 <div>
   <% @products.each do |product| %>
-  <%= product.name %>
-  <%= product.price %>
+  <%= link_to product_path(product) do %>
+    <div class="card">
+      <h1><%= product.name %></h1>
+      <h3><%= product.price %></h3>
+    </div>
+    <% end %>
   <% end %>
 
 </div>
+
+<button><%= link_to 'Create a product', new_product_path %>
+</button>
