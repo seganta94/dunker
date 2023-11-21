@@ -1,5 +1,5 @@
 <div class="banner-list card-category">
-  <% if @list.photo.attached?  %>
+  <% if @product.photo.attached?  %>
     <%= cl_image_tag @product.photo.key, crop: :fill %>
   <% else %>
     <div>Imagem fixa</div>
