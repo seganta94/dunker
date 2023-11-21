@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :configure_permitted_parameters, if: :devise_controller?
 
   before_action :set_product, only: %i[show edit update destroy]
 
@@ -44,10 +43,5 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
-  end
-
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
   end
 end
