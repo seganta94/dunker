@@ -15,7 +15,7 @@ class SalesController < ApplicationController
       if sale.save
         # redirect_to "indexdasminhascompras"_path("com o que?"), notice: "Compra efetuada"
       else
-        notice: "Erro na compra # escolher um caminho para redirecionar"
+        # notice: "Erro na compra # escolher um caminho para redirecionar"
       end
 
   end
