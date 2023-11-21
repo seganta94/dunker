@@ -7,9 +7,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :email, precense: true
+  validates :email, presence: true
   validates :email, format: { with: /\A[^@\s]+@[^@\s]+\.[a-zA-Z]+\z/, message: "Invalid email format" }
-  validates :encrypted_password, precense: true, length: { minimum: 6 }
-  validates :first_name, precense: true
-  validates :last_name, precense: true
+  validates :encrypted_password, presence: true, length: { minimum: 6 }
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end
