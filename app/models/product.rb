@@ -8,4 +8,5 @@ class Product < ApplicationRecord
   validates :condition, presence: true, inclusion: { in: ['New', 'Used', 'Refurbished'] }
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :description, presence: true,  length: { maximum: 150 }
+  validates :sport, presence: true, inclusion: { in: ['Soccer', 'Footbal', 'Tennis', 'Volleyball', 'Skateboarding', 'Hockey', 'Snowboarding', 'Ski', 'Rollerblading', 'Basketball', 'Golf', 'Hugby'] }
 end
