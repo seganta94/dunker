@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   before_action :set_product, only: %i[show edit update destroy]
 
   def index
