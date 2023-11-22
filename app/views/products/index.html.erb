@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/premium-photo/empty-urban-outdoor-basketball-court-night-with-wide-angle-view-generative-ai_697880-5532.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696809600&semt=ais);">
   <div class="container">
     <h1>Discover the best deals in sports </h1>
     <p>New and used</p>
@@ -12,6 +12,8 @@
       <% @products.each do |product| %>
       <%= link_to product_path(product) do %>
       <div class="cards">
+      <div>
+      </div>
         <div class="card h-100">
           <% if product.photo.attached? %>
             <%= cl_image_tag product.photo.key, crop: :fill, class: "card-img-top" %>
