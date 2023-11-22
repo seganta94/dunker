@@ -14,3 +14,5 @@
 <%# link_to 'Delete Item', product_path %>
 <%= link_to 'Update Item', edit_product_path(@product), class: 'btn btn-primary' %>
 <%= link_to 'Back to all products', products_path %>
+
+<%= link_to 'Buy',  new_product_sale_path(@product), class: 'btn-primary' %>
