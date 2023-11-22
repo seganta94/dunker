@@ -8,11 +8,12 @@ class SalesController < ApplicationController
   end
 
   def create
+    @product = Product.find(params[:product_id])
     @sale = Sale.new(sales_params)
     @sale.user = current_user
+    @sale.product = @product
 
-
-      if sale.save
+      if @sale.save
         # redirect_to "indexdasminhascompras"_path("com o que?"), notice: "Compra efetuada"
       else
         # notice: "Erro na compra # escolher um caminho para redirecionar"
@@ -24,7 +25,7 @@ class SalesController < ApplicationController
   private
 
   def sales_params
-    params.rqeuire(:sale).permit(:product_id, :user_id)
+    params.rqeuire(:sale).permit(:product_id, :user)
   end
 
 
@@ -44,3 +45,4 @@ create_table "sales", force: :cascade do |t|
   t.index ["product_id"], name: "index_sales_on_product_id"
   t.index ["user_id"], name: "index_sales_on_user_id"
 end
+
