@@ -2,7 +2,9 @@
   <div class="payment-body">
     <div class="model">
       <div class="room">
-        <%= cl_image_tag @product.photo.key, crop: :fill, class: "card-img-top" %>
+        <% if @product.photo.attached? %>
+          <%= cl_image_tag @product.photo.key, width: 450, height: 700,  crop: :fill, class: "card-img-sale" %>
+        <% end %>
         <div class="text-cover">
           <h1><%= @product.name %></h1>
           <p class="price"><span>$</span> <%= @product.price %>,00</p>
@@ -44,16 +46,19 @@
           <h3>Payment Info</h3>
           <form>
             <%= simple_form_for :false_form do |f| %>
-              <%= f.input :name, label: 'Name on credit card', input_html: { value: 'Basket boy' } %>
-              <%= f.input :ccnumber, label: 'credit card number', input_html: { value: '2023 1425 1425 2023' } %>
+              <%= f.input :name, label: 'Name on credit card', input_html: { value: 'Basket boy', class: "mb-0" } %>
+              <%= f.input :ccnumber, label: 'credit card number', input_html: { value: '2023 1425 1425 2023', class: "mb-0"  } %>
+            <% end %>
+
+            <%= simple_form_for :sales do |f| %>
               <%= f.submit 'Pay', class: 'btn btn-primary' %>
             <% end %>
 
-          <div class="field-container">
-          </div>
+            <div class="field-container">
+            </div>
 
 
-        </form>
+          </form>
         </div>
       </div>
     </div>
