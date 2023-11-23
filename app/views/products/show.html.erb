@@ -1,17 +1,23 @@
-<div class="wrapper">
-  <div class="product-img">
-    <%= cl_image_tag @product.photo.key, crop: :fill, height: 420, width: 327 %>
-  </div>
-  <div class="product-info">
-    <div class="product-text">
-      <h1><%=@product.name%></h1>
-      <h2><%=@product.brand%></h2>
-      <p><%=@product.description%></p>
+<div class="container-dunker">
+  <div class="wrapper">
+    <div class="product-img">
+      <% if @product.photo.attached? %>
+        <%= cl_image_tag @product.photo.key, crop: :fill, height: 420, width: 327 %>
+      <% else %>
+        <%= image_tag "https://www.amapa.gov.br/img/noticias/7f77ad34d638c86bc5614e58610ed240.jpg", class: "card-img-top" %>
+      <% end %>
     </div>
-    <div class="product-price-btn">
-      <p><span><strong><%= number_to_currency(@product.price, precision: 2) %></strong></span></p>
-      <button type="button"><%= link_to 'Add to cart', new_product_sale_path(@product), class: 'btn-primary' %></button>
-      <%= link_to 'Update Item', edit_product_path(@product), class: 'update' %>
+    <div class="product-info">
+      <div class="product-text">
+        <h1><%=@product.name%></h1>
+        <h2><%=@product.brand%></h2>
+        <p><%=@product.description%></p>
+      </div>
+      <div class="product-price-btn">
+        <p><span><strong><%= number_to_currency(@product.price, precision: 2) %></strong></span></p>
+        <button type="button"><%= link_to 'Add to cart', new_product_sale_path(@product), class: 'btn-primary' %></button>
+        <%= link_to 'Update Item', edit_product_path(@product), class: 'update' %>
+      </div>
     </div>
   </div>
 </div>
