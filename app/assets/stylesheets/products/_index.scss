@@ -26,10 +26,22 @@
 }
 
 .card {
-  text-decoration: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  a h1{
+    text-decoration: none;
+  }
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.card-body {
+  a {
+    text-decoration: none;
+  }
 }
 
 // Smallest device

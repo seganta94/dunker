@@ -1,4 +1,9 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wx.mlcdn.com.br/ponzi/production/portaldalu/61333.jpg);">
+  <div class="carrousel-inner">
+    <div class="">
+    </div>
+  </div>
+
   <div class="container">
     <h1>Discover the best deals in sports </h1>
     <p>New and used</p>
@@ -12,10 +17,10 @@
       <div class="col mb-4">
         <%= link_to product_path(product) do %>
           <div class="card h-100">
+            <div class="card-body">
             <% if product.photo.attached? %>
               <%= cl_image_tag product.photo.key, crop: :fill, class: "card-img-top" %>
             <% end %>
-            <div class="card-body">
               <h1><%= product.name %></h1>
               <h3><%= product.price %></h3>
             </div>
