@@ -1,5 +1,4 @@
 class SalesController < ApplicationController
-
   def new
     # A sale é nestada com o user ou com o produto?
     # acredito que deva ser com o user
@@ -18,15 +17,9 @@ class SalesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-
   end
 
   def index
     @sales = current_user.sales.all
   end
-
-
-
-
-
 end
