@@ -37,6 +37,7 @@
 
 .card-img-top {
   width: 100%;
+  border-radius: 10px;
 }
 
 .card-body {
@@ -100,6 +101,7 @@
   margin: 0 auto;
   padding: 6% 2%;
 }
+
 .pack-grig{
   margin: 20px 0 0 0;
   padding: 0;
@@ -107,11 +109,13 @@
   display: block;
   text-align: center;
   width: 100%;
-
+  position: relative;
 }
+
 .pack-grig:after{
   clear: both;
 }
+
 .pack-grig:after,xop-box:before{
   content: '';
   display: table;
@@ -122,6 +126,7 @@
   display: inline-block;
   margin: 20px;
 }
+
 .pack-box{
   width: 100%;
   height: 100%;
@@ -130,11 +135,12 @@
   border-radius: 10px;
   -webkit-transition: 0.3s ease-in-out;
   -webkit-transform: 0.3s ease-in-out;
-   -moz-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
   -moz-transform: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   transform: 0.3s ease-in-out;
 }
+
 .pack-box:hover{
   transform: scale(1.05);
   box-shadow: 6px 3px 10px #000;
@@ -145,6 +151,7 @@
   width: inherit;
   height: inherit;
 }
+
 .pack-info h3{
   font-family: sans-serif;
   font-weight: 400;
@@ -153,26 +160,8 @@
   margin: 150px 0 0;
   line-height: 1;
 }
+
 .pack-info p{
   font-family: sans-serif;
   color: #fff;
-}
-.pack-info button{
-	cursor: pointer;
-	width: 100px;
-  height: 35px;
-  color: #fff;
-  font-size: 16px;
-  background: green;
-  border: none;
-  border-radius: 13px;
-  box-shadow: 0 2px 3px #000;
-  outline: none;
-
-}
-.pack-info button:hover{
-  background: #ff5349;
-  font-size: 20px;
-  box-shadow: 0 2px 3px #000;
-  width: 120px;
 }
