@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-body {
+.payment-body {
   margin: 0;
   padding: 10% 0;
   position: relative;
@@ -70,7 +70,7 @@ label {
 .room {
   width: 50%;
   height: 100%;
-  background: url(https://images.unsplash.com/photo-1470274038469-958113db2384?auto=format&fit=crop&w=1875&q=80) no-repeat center center;
+  // background: url(https://images.unsplash.com/photo-1470274038469-958113db2384?auto=format&fit=crop&w=1875&q=80) no-repeat center center;
   background-size: cover;
   display: inline-block;
   vertical-align: top;
@@ -163,5 +163,3 @@ input[type=text]{
 .table td:nth-child(2) {
   text-align: right;
 }
-
-
