@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   z-index: 3;
-  // background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
 }
 
 .navbar-lewagon {
@@ -17,7 +17,7 @@
   width: 150px;
 }
 
-.nav-item a {
-  color: #fff
-  &hover
+.nav-transparent {
+  background-color: transparent;
+
 }
