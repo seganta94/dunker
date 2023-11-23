@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @transparent = true
   end
 
   def user
