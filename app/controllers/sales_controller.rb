@@ -11,6 +11,7 @@ class SalesController < ApplicationController
     @sale = Sale.new
     @sale.user = current_user
     @sale.product = @product
+    raise
 
     if @sale.save
       redirect_to sales_path, notice: "Compra efetuada"
