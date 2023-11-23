@@ -9,25 +9,15 @@
 
 .payment-body {
   margin: 0;
-  padding: 10% 0;
+  // padding: 10% 0;
   position: relative;
-  min-height: 100vh;
-  background: #34495e;
+  // background: #34495e;
   display: flex;
   justify-content: center;
-    animation: fadein 5s;
   animation-fill-mode: forwards;
+
 }
 
-.fadeIn {
-  animation: fadein 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 
 label {
   display: block;
@@ -41,29 +31,18 @@ label {
 /*   font-size: 0; */
   color: white;
   position: relative;
-/*   animation: slideInFromLeft 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
-  animation-fill-mode: forwards;
+  border-radius: 15px;
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 }
 
 .card-img-sale {
   // height: 100%;
   // width: 100%;
-
+  object-fit: cover;
 
 }
 
-.model:after {
-    width: 30px;
-    content: 'X';
-    height: 30px;
-    color: black;
-    position: absolute;
-    text-align: center;
-    padding-top: 3px;
-    top: 0;
-    right: -30px;
-    background-color: #bdc3c7;
-}
+
 
 @keyframes slideInFromLeft {
   0% {
@@ -80,16 +59,21 @@ label {
   // background: url(https://images.unsplash.com/photo-1470274038469-958113db2384?auto=format&fit=crop&w=1875&q=80) no-repeat center center;
   background-size: cover;
   display: inline-block;
+  background-position: center;
   vertical-align: top;
   position: relative;
+  border-radius: 15px 0px 0px 15px;
 }
+
+
 
 .text-cover {
   position: absolute;
   bottom: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  padding: 20px
+  padding: 20px;
+  border-radius: 0px 0px 0px 15px;
 }
 
 .text-cover > * {
@@ -117,17 +101,22 @@ label {
 }
 
 .receipt-box {
-  padding: 20px 20px;
+  padding: 0 20px;
   border-bottom: 1px solid #34495e;
 }
 
-.receipt-box h3,
+
 .payment-info h3 {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
+.receipt-box h3 {
+  padding: 20px 0;
+
+}
 .payment-info {
-  padding: 20px;
+  padding: 0px 20px;
+
 }
 
 
