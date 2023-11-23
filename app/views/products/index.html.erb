@@ -20,7 +20,6 @@
               <div class="pack-box" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= product.photo.attached? ? cl_image_path(product.photo.key, crop: :fill, width: 320, height:328) :  "https://www.amapa.gov.br/img/noticias/7f77ad34d638c86bc5614e58610ed240.jpg"  %>);">
                 <div class="pack-info">
                   <h3><%= product.name %></h3>
-                  <p><%= number_to_currency(product.price, precision: 2) %></p>
                 </div>
               </div>
           <% end %>
@@ -42,29 +41,4 @@
         </div> %>
   </div>
 </div>
-
-
-
-
-
-
-
-<%# <div class="pack-section">
-		<ul class="pack-grig">
-			<li>
-				<div class="pack-box pack-img-1">
-					<div class="pack-info">
-						<h3>Cape-Town</h3>
-						<p>One beaultiful south african city.just on the foot of drunkesberg mountain.</p>
-						<button>view</button>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div> %>
-
-
-
-
-
 </div>
