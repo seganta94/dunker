@@ -1,6 +1,6 @@
-<div class="container">
-<%= render 'form', product: @product %>
+<div class="container container-edit">
+  <h1 class="text-center">Sell new product:</h1>
+  <%= render 'form', product: @product %>
 
-<button><%= link_to 'Cancel', products_path %>
-</button>
+  <%= link_to 'Cancel', products_path, class: 'btn btn-secondary'%>
 </div>
