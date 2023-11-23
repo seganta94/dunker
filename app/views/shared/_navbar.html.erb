@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top <%="nav-transparent" if @transparent%>" data-controller="navbar" data-action="scroll@window->navbar#updateColor">
   <div class="container-fluid">
     <%= link_to products_path, class: "navbar-brand" do %>
       <%= image_tag 'logo-2.png' %>
