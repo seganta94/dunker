@@ -1,30 +1,63 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wx.mlcdn.com.br/ponzi/production/portaldalu/61333.jpg);">
-  <div class="container">
-    <h1>Discover the best deals in sports </h1>
-    <p>New and used</p>
+<div class="container-dunker">
+  <div class="banner" data-navbar-target="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wx.mlcdn.com.br/ponzi/production/portaldalu/61333.jpg);">
+    <div class="carrousel-inner">
+      <div class="">
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Discover the best deals in sports</h1>
+      <p>New and used</p>
+    </div>
   </div>
-</div>
 
 
-<div class="container-fluid">
-  <div class="row row-cols-1 row-cols-md-4 justify-content-center">
-    <% @products.each do |product| %>
+  <div>
+    <div class="row row-cols-1 row-cols-md-4 justify-content-center">
+      <% @products.each do |product| %>
       <div class="col mb-4">
         <%= link_to product_path(product) do %>
-          <div class="card h-100">
-            <% if product.photo.attached? %>
-              <%= cl_image_tag product.photo.key, crop: :fill, class: "card-img-top" %>
+          <div class="pack-section">
+            <ul class="pack-grid">
+              <li>
+                <div class="pack-box">
+                <% if product.photo.attached? %>
+                  <%= cl_image_tag product.photo.key, crop: :fill, class: "card-img-top" %>
+                <% else %>
+                  <%= image_tag "https://www.amapa.gov.br/img/noticias/7f77ad34d638c86bc5614e58610ed240.jpg", class: "card-img-top" %>
+                <% end %>
+                <div class="pack-info">
+                  <h3><%= product.name %></h3>
+                  <p><%= product.price %></p>
+                </div>
+                </div>
+              </div>
             <% end %>
-            <div class="card-body">
-              <h1><%= product.name %></h1>
-              <h3><%= product.price %></h3>
-            </div>
-            <%# <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div> %>
           </div>
-        <% end %>
+          <% end %>
+          </li>
+          </div>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
+
+
+
+<%# <div class="pack-section">
+		<ul class="pack-grig">
+			<li>
+				<div class="pack-box pack-img-1">
+					<div class="pack-info">
+						<h3>Cape-Town</h3>
+						<p>One beaultiful south african city.just on the foot of drunkesberg mountain.</p>
+						<button>view</button>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div> %>
+
+
+
 </div>

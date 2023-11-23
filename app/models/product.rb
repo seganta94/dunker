@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :user
+  has_one :sale, dependent: :destroy
   has_one_attached :photo
 
   CATEGORIES = ['Apparel', 'Accessories', 'Equipment', 'Shoes', 'Adult', "Kids"]
