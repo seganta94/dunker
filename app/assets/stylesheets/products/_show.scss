@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+.container-edit {
+  margin-bottom: auto;
+  margin-top: 70px;
+}
+
 .wrapper {
   height: 420px;
   width: 654px;
@@ -134,5 +139,5 @@ span {
   font-weight: bold;
 }
 .product-price-btn button:hover {
-  background-color: #b45b02;
+  background-color: #f5c492;
 }
