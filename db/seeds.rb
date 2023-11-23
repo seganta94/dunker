@@ -16,8 +16,10 @@ user5 = User.create(first_name: "adriano", last_name: "santos", email: "adriano@
 puts "Seeding products..."
 
 10.times do
-product = Product.create!(user_id: user.id, name: Faker::Sport.sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
+  product = Product.create!(user_id: user.id, name: Faker::Sport.sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
 
+  image_url = "https://source.unsplash.com/400x400/?sports"
+  product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 end
 
 # 10.times do
