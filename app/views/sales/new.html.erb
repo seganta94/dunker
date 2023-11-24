@@ -1,4 +1,4 @@
-<div class="container container-edit">
+<div class="container container-edit mb-4">
   <div class="payment-body">
     <div class="model">
       <div class="room" style="background-image: url(<% if @product.photo.attached? %>
@@ -8,8 +8,6 @@
         <div class="text-cover">
           <h1><%= @product.name %></h1>
           <p class="price"><span></span> <%=  number_to_currency(@product.price, precision: 2)  %></p>
-          <hr>
-          <p><%= @product.description %></p>
 
         </div>
       </div><div class="payment">
@@ -17,17 +15,17 @@
           <h3>Details</h3>
           <table class="table">
             <tr>
-              <td>Category:</td>
-              <td><%= @product.category %></td>
-            </tr>
-            <tr>
               <td>Brand:</td>
               <td><%= @product.brand %></td>
             </tr>
             <tr>
+            </tr>
               <td>Condition:</td>
               <td><%= @product.condition %></td>
             </tr>
+            <tr>
+              <td>Category:</td>
+              <td><%= @product.category %></td>
             <tr>
               <td>&nbsp</td>
               <td></td>
@@ -42,7 +40,7 @@
             </tfoot>
           </table>
         </div>
-        <div class="payment-info">
+        <div class="payment-info mb-2">
           <h3>Payment Info</h3>
           <form>
             <%= simple_form_for :false_form do |f| %>
