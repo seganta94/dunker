@@ -27,21 +27,16 @@ user5 = User.create(first_name: "adriano", last_name: "santos", email: "adriano@
 puts "Seeding products..."
 
 10.times do
-<<<<<<< HEAD
   product = Product.create!(user_id: user.id, name: Faker::Sport.unique..sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price, description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
 =======
-<<<<<<< Updated upstream
   product = Product.create!(user_id: user.id, name: sports_item.sample, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price, Faker::Lorem.sentence(word_count: 20), sport: Product::SPORTS.sample)
-=======
   product = Product.create!(user_id: user.id, name: Faker::Sport.unique..sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price, description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
->>>>>>> 627b7572ca51a3317657e298142204b06363ba9d
 >>>>>>> Stashed changes
 
   image_url = "https://source.unsplash.com/400x400/?sport-items"
   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 end
 
-<<<<<<< HEAD
 10.times do
   product = Product.create!(user_id: user2.id, name: Faker::Sport.unique.sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price, description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
 =======
