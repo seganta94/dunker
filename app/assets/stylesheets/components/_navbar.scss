@@ -26,4 +26,9 @@
 .search-bar {
   display: flex;
   float: right;
+  margin-right: 80px;
+}
+
+.dropdown-menu {
+  z-index: 5;
 }
