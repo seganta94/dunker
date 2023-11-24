@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "filter";
 
 .inline-inputs {
   display: flex;
@@ -115,6 +116,14 @@ body h1 h2 h3 h4 h5 {
   margin: 0;
   text-decoration: none;
   padding: 10px;
+}
+
+.pack-grid-filter{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  gap: 20px;
+  margin: 20px;
 }
 
 .category, .category-card{
