@@ -13,7 +13,7 @@ class Product < ApplicationRecord
   CATEGORIES = ['Apparel', 'Accessories', 'Equipment', 'Shoes', 'Adult', "Kids"]
   BRANDS = ['Nike', 'Adidas', 'Reebok', 'Under Armor', 'Puma', 'Asics', 'New Balance', 'Speedo', 'Mizuno']
   CONDITION = ['New', 'Used', 'Refurbished']
-  SPORTS = ['Soccer', 'Footbal', 'Tennis', 'Volleyball', 'Skateboarding', 'Hockey', 'Snowboarding', 'Ski', 'Rollerblading', 'Basketball', 'Golf', 'Hugby']
+  SPORTS = ['Soccer', 'Tennis', 'Hockey', 'Snowboarding', 'Basketball', 'Golf', 'Rugby']
 
   validates :name, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
