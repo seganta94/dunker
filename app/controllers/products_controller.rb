@@ -12,6 +12,13 @@ class ProductsController < ApplicationController
     end
   end
 
+  def filter
+    @products = Product.all
+      if params[:query].present?
+        @products = @products.where(category: params[:query])
+      end
+  end
+
   def user
     @products = current_user.products.all
   end
