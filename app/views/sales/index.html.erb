@@ -1,15 +1,6 @@
+<div class="container container-edit">
 
-
-<div class="container">
-
-<h1>My Previous Purchases</h1>
-
-  <%# <div class="flash flash-success alert alert-dismissible fade show" role="alert">
-    <span><strong>Yay!</strong> 🎉 you successfully signed in to our service.</span>
-    <a data-bs-dismiss="alert" aria-label="Close">
-      <i class="fas fa-times"></i>
-    </a>
-  </div> %>
+<h1 class="text-center">My Previous Purchases</h1>
 
   <div>
     <% @sales.order('created_at DESC').each do |sale| %>
@@ -20,11 +11,18 @@
         <div class="card-product-infos">
           <h2><%= sale.product.name %></h2>
           <p><strong><%= number_to_currency(sale.product.price, precision: 2) %></strong></p>
-          <p><%= sale.product.category %> | <%= sale.product.brand %> | <%= sale.product.condition %> | 
-
-          <%= link_to "adicionar review (no futuro)"  %>
+          <p><%= sale.product.category %> | <%= sale.product.brand %> | <%= sale.product.condition %> 
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+
+
+  <%# <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+    <span><strong>Yay!</strong> 🎉 you successfully signed in to our service.</span>
+    <a data-bs-dismiss="alert" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div> %>
