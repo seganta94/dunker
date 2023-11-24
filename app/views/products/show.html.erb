@@ -1,8 +1,8 @@
-<div class="container-dunker">
-  <div class="wrapper">
+<div>
+  <div class="wrapper d-flex ">
     <div class="product-img">
       <% if @product.photo.attached? %>
-        <%= cl_image_tag @product.photo.key, crop: :fill, height: 420, width: 327 %>
+        <%= cl_image_tag @product.photo.key, crop: :fill, height: 600, width: 450 %>
       <% else %>
         <%= image_tag "https://www.amapa.gov.br/img/noticias/7f77ad34d638c86bc5614e58610ed240.jpg", class: "card-img-top" %>
       <% end %>

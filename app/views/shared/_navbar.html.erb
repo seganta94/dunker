@@ -10,7 +10,7 @@
 
 
 
-    <div class="d-flex">
+
       <%= form_with url: products_path, method: :get, class: "search-bar" do %>
         <%= text_field_tag :query,
               params[:query],
@@ -48,6 +48,6 @@
           <% end %>
         </ul>
       </div>
-    </div>
+
   </div>
 </div>
