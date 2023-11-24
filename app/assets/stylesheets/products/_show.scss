@@ -1,8 +1,7 @@
 .container-dunker {
   width: 100%;
   height: 100%;
-  background-color: #fbfbfb;
-  margin-top: -3rem;
+  background-color: #fbfbfba8;
 }
 
 .container-edit {
@@ -27,6 +26,10 @@
 // ---------- USER PRODUCT
 .card-product-user img{
   width: 30%;
+}
+
+.card-image-top {
+  object-fit: contain;
 }
 
 // ---------- USER PRODUCT
