@@ -7,7 +7,7 @@ VIEW DE TESTE
       <div id="movies">
         <% if @products.any? %>
           <% @products.each do |product| %>
-            <h4><%= product.category %></h4>
+            <h4><%= link_to product.category %></h4>
           <% end %>
         <% else %>
           <em>Sorry, no products found.</em>
