@@ -3,6 +3,7 @@
   width: 100%;
   z-index: 3;
   background-color: rgb(255, 255, 255);
+  overflow: hidden;
 }
 
 .navbar-lewagon {
@@ -20,4 +21,9 @@
 .nav-transparent {
   background-color: transparent;
   color: white;
+}
+
+.search-bar {
+  display: flex;
+  float: right;
 }

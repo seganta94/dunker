@@ -3,6 +3,13 @@ class Product < ApplicationRecord
   has_one :sale, dependent: :destroy
   has_one_attached :photo
 
+  include PgSearch::Model
+  pg_search_scope :search_products,
+    against: [ :name, :category ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
   CATEGORIES = ['Apparel', 'Accessories', 'Equipment', 'Shoes', 'Adult', "Kids"]
   BRANDS = ['Nike', 'Adidas', 'Reebok', 'Under Armor', 'Puma', 'Asics', 'New Balance', 'Speedo', 'Mizuno']
   CONDITION = ['New', 'Used', 'Refurbished']

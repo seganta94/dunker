@@ -8,9 +8,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <div class="row">
+      <div class="col-sm-8">
+        <%= form_with url: products_path, method: :get, class: "search-bar" do %>
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Type a keyword"
+            %>
+          <%= submit_tag "Search", name: "", class:"btn btn-outline-warning" %>
+        <% end %>
+      </div>
+    </div>
+
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", products_path, class: "nav-link" %>
+          </li>
           <li class="nav-item active">
             <%= link_to "Sell a product", new_product_path, class: "nav-link" %>
           </li>
