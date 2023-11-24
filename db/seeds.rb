@@ -45,7 +45,7 @@ end
 #   product = Product.create!(user_id: user2.id, name: sports_item.sample, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price, description: Faker::Lorem.characters(number: 100), sport: Product::SPORTS.sample)
 >>>>>>> 627b7572ca51a3317657e298142204b06363ba9d
 
-#   image_url = "https://source.unsplash.com/400x400/?sports"
+#   image_url = "https://source.unsplash.com/400x400/?sport-items"
 #   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 # end
 
@@ -57,7 +57,7 @@ end
 #   product = Product.create!(user_id: user3.id, name: sports_item.sample, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price, description: Faker::Lorem.characters(number: 100), sport: Product::SPORTS.sample)
 >>>>>>> 627b7572ca51a3317657e298142204b06363ba9d
 
-#   image_url = "https://source.unsplash.com/400x400/?sports"
+#   image_url = "https://source.unsplash.com/400x400/?sport-items"
 #   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 # end
 
@@ -69,7 +69,7 @@ end
 #   product = Product.create!(user_id: user4.id, name: sports_item.sample, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price, description: Faker::Lorem.characters(number: 100), sport: Product::SPORTS.sample)
 >>>>>>> 627b7572ca51a3317657e298142204b06363ba9d
 
-#   image_url = "https://source.unsplash.com/400x400/?sports"
+#   image_url = "https://source.unsplash.com/400x400/?sport-items"
 #   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 # end
 
@@ -81,7 +81,7 @@ end
 #   product = Product.create!(user_id: user5.id, name: sports_item.sample, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price, description: Faker::Lorem.characters(number: 100), sport: Product::SPORTS.sample)
 >>>>>>> 627b7572ca51a3317657e298142204b06363ba9d
 
-#   image_url = "https://source.unsplash.com/400x400/?sports"
+#   image_url = "https://source.unsplash.com/400x400/?sport-items"
 #   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 # end
 

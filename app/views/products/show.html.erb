@@ -11,7 +11,7 @@
       <div class="product-text">
         <h1><%=@product.name%></h1>
         <h2><%=@product.brand%></h2>
-        <p><%=@product.description%></p>
+        <p class= "text-wrap"><%=@product.description%></p>
       </div>
       <div class="product-price-btn">
         <p><%= number_to_currency(@product.price, precision: 2) %></p>
