@@ -17,7 +17,7 @@
         <%= link_to products_path, class: "navbar-brand" do %>
           <%= image_tag 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', class: "card-image" %>
           <div class="sport-info">
-            <h4>Soccer</h4>
+            <h5>Soccer</h5>
           </div>
         <% end %>
 
@@ -26,7 +26,7 @@
         <%= link_to products_path, class: "navbar-brand" do %>
           <%= image_tag 'https://images.unsplash.com/flagged/photo-1550585477-a025700d7fce?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', class: "card-image" %>
           <div class="sport-info">
-            <h4>Hockey</h4>
+            <h5>Hockey</h5>
           </div>
         <% end %>
 
@@ -35,7 +35,7 @@
         <%= link_to products_path, class: "navbar-brand" do %>
           <%= image_tag 'https://plus.unsplash.com/premium_photo-1663045882560-3bdd5f71687c?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', class: "card-image" %>
           <div class="sport-info">
-            <h4>Tennis</h4>
+            <h5>Tennis</h5>
           </div>
         <% end %>
 
@@ -44,7 +44,7 @@
         <%= link_to products_path, class: "navbar-brand" do %>
           <%= image_tag 'https://images.unsplash.com/photo-1625154869776-100eba31abbb?q=80&w=1191&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', class: "card-image" %>
           <div class="sport-info">
-            <h4>Snowboarding</h4>
+            <h5>Snowboarding</h5>
           </div>
         <% end %>
 
@@ -53,7 +53,7 @@
         <%= link_to products_path, class: "navbar-brand" do %>
           <%= image_tag 'https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', class: "card-image" %>
           <div class="sport-info">
-            <h4>Basketball</h4>
+            <h5>Basketball</h5>
           </div>
         <% end %>
 
@@ -62,7 +62,7 @@
         <%= link_to products_path, class: "navbar-brand" do %>
           <%= image_tag 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', class: "card-image" %>
           <div class="sport-info">
-            <h4>Golf</h4>
+            <h5>Golf</h5>
           </div>
         <% end %>
 
@@ -71,7 +71,7 @@
         <%= link_to products_path, class: "navbar-brand" do %>
           <%= image_tag 'https://plus.unsplash.com/premium_photo-1663011446848-6e015a62b419?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', class: "card-image" %>
           <div class="sport-info">
-            <h4>Rugby</h4>
+            <h5>Rugby</h5>
           </div>
         <% end %>
       </div>
@@ -85,7 +85,7 @@
           <%= link_to product_path(product) do %>
               <div class="pack-box" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= product.photo.attached? ? cl_image_path(product.photo.key, crop: :fill, width: 320, height:328) :  "https://www.amapa.gov.br/img/noticias/7f77ad34d638c86bc5614e58610ed240.jpg"  %>);">
                 <div class="pack-info">
-                  <h3><%= product.name %></h3>
+                  <h2><%= product.name %></h2>
                 </div>
               </div>
           <% end %>

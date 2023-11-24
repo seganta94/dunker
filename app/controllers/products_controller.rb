@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     @transparent = true
     @products = Product.all
     if params[:query].present?
-      @products = Product.search_products(params[:query])
+      @products = Product.search_by_name_and_category(params[:query])
     end
   end
 
