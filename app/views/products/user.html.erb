@@ -7,12 +7,12 @@
       <div class="card-product">
         <img src="<% if product.photo.attached? %>
           <%= cl_image_path product.photo.key %>
-
         <% end %>" />
         <div class="card-product-infos">
           <h2><%= product.name %></h2>
           <p><strong><%= number_to_currency(product.price, precision: 2) %></strong></p>
           <p><%= product.brand %> | <%= product.category %> | <%= product.condition %> |
+          <%= link_to 'Update Item', edit_product_path(product)%>
         </div>
       </div>
     <% end %>

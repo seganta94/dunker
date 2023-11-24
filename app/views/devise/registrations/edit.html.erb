@@ -38,9 +38,9 @@
   <% end %>
 
   <div>
-   <%= button_to "Delete my account", registration_path(resource_name),
-              data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" },
-              method: :delete,
-              class: "btn btn-danger d-block mx-auto text-center font-weight-bold" %>
+    <%= button_to "Delete my account", registration_path(resource_name),
+                data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" },
+                method: :delete,
+                class: "btn btn-danger d-block mx-auto text-center font-weight-bold mb-3" %>
   </div>
 </div>
