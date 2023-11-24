@@ -5,13 +5,33 @@ VIEW DE TESTE
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <div id="movies">
-        <% if @products.any? %>
-          <% @products.each do |product| %>
-            <h4><%= link_to product.category %></h4>
+        <% if @productscategory.any? %>
+          <% @productscategory.each do |product| %>
+            <h4><%= link_to product.category, filter_products_path(category: product.category) %></h4>
           <% end %>
         <% else %>
           <em>Sorry, no products found.</em>
         <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-dunker">
+ <div>
+    <div class="pack-grid">
+      <% @products.each do |product| %>
+        <div class="mb-4">
+          <%= link_to product_path(product) do %>
+              <div class="pack-box" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= product.photo.attached? ? cl_image_path(product.photo.key, crop: :fill, width: 320, height:328) :  "https://www.amapa.gov.br/img/noticias/7f77ad34d638c86bc5614e58610ed240.jpg"  %>);">
+                <div class="pack-info">
+                  <h3><%= product.name %></h3>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      <% end %>
       </div>
     </div>
   </div>
