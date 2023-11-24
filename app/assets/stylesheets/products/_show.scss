@@ -30,6 +30,13 @@ body {
   float: left;
   height: 420px;
   width: 327px;
+
+  background-size: cover;
+  display: inline-block;
+  background-position: center;
+  vertical-align: top;
+  position: relative;
+  border-radius: 15px 0px 0px 15px;
 }
 
 .product-img img {
@@ -80,6 +87,14 @@ body {
   font-size: 15px;
   font-weight: lighter;
   overflow: hidden;
+}
+
+.product-update-btn {
+  height: 103px;
+  width: 327px;
+  margin-top: 17px;
+  position: relative;
+  font-size: 12px;
 }
 
 .product-price-btn {

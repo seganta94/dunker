@@ -1,6 +1,8 @@
+
+
 <div class="container">
 
-  <h1>My Previous Purchases</h1>
+<h1>My Previous Purchases</h1>
 
   <%# <div class="flash flash-success alert alert-dismissible fade show" role="alert">
     <span><strong>Yay!</strong> 🎉 you successfully signed in to our service.</span>
@@ -12,12 +14,15 @@
   <div>
     <% @sales.order('created_at DESC').each do |sale| %>
       <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <img src="<% if sale.product.photo.attached? %>
+          <%= cl_image_path sale.product.photo.key %>
+        <% end %>" />
         <div class="card-product-infos">
           <h2><%= sale.product.name %></h2>
-          <p><strong>R$ <%= sale.product.price %>,00</strong></p>
+          <p><strong><%= number_to_currency(sale.product.price, precision: 2) %></strong></p>
+          <p><%= sale.product.category %> | <%= sale.product.brand %> | <%= sale.product.condition %> | 
 
-          <p><%= link_to "adicionar review (no futuro)"  %></p>
+          <%= link_to "adicionar review (no futuro)"  %>
         </div>
       </div>
     <% end %>
