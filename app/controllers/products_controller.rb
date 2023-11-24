@@ -5,8 +5,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
 
   def index
-    @products = Product.all
     @transparent = true
+    @products = Product.all
+    if params[:query].present?
+      @products = Product.search_products(params[:query])
+    end
   end
 
   def user
