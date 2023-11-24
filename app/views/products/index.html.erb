@@ -5,7 +5,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="banner-text">
       <h1>Discover the best deals in sports</h1>
       <p>New and used</p>
     </div>
@@ -14,7 +14,7 @@
   <div>
     <div class="pack-grid">
       <% @products.each do |product| %>
-        <div class=" mb-4">
+        <div class="mb-4">
           <%= link_to product_path(product) do %>
               <div class="pack-box" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= product.photo.attached? ? cl_image_path(product.photo.key, crop: :fill, width: 320, height:328) :  "https://www.amapa.gov.br/img/noticias/7f77ad34d638c86bc5614e58610ed240.jpg"  %>);">
                 <div class="pack-info">
