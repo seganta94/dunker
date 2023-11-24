@@ -15,7 +15,9 @@
   <body data-controller="navbar">
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-    <%= yield %>
+    <div class="mt-5">
+      <%= yield %>
+    </div>
     <%= render "shared/footer" %>
   </body>
 </html>
