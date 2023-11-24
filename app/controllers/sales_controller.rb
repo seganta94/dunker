@@ -1,7 +1,5 @@
 class SalesController < ApplicationController
   def new
-    # A sale é nestada com o user ou com o produto?
-    # acredito que deva ser com o user
     @sale = Sale.new
     @product = Product.find(params[:product_id])
   end
@@ -11,7 +9,6 @@ class SalesController < ApplicationController
     @sale = Sale.new
     @sale.user = current_user
     @sale.product = @product
-    raise
 
     if @sale.save
       redirect_to sales_path, notice: "Compra efetuada"

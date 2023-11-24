@@ -7,7 +7,7 @@
 
         <div class="text-cover">
           <h1><%= @product.name %></h1>
-          <p class="price"><span>$</span> <%= @product.price %>,00</p>
+          <p class="price"><span>$</span> <%=  number_to_currency(@product.price, precision: 2)  %></p>
           <hr>
           <p><%= @product.description %></p>
 
@@ -36,7 +36,7 @@
               <tr>
 
                   <td><strong>Total</strong></td>
-                  <td><strong>$ <%= @product.price %>.00</strong></td>
+                  <td><strong>$ <%= number_to_currency(@product.price, precision: 2) %></strong></td>
 
               </tr>
             </tfoot>
@@ -50,9 +50,11 @@
               <%= f.input :ccnumber, label: 'Credit card number', input_html: { value: '2023 1425 1425 2023', class: "m-0"  } %>
             <% end %>
 
-            <%= link_to 'pay', sales_path, class: 'btn btn-dunker' %>
+            </form>
+              <%= simple_form_for [@product, Sale.new], url: product_sales_path(@product.id), method: :post, html: { class: 'btn-form' } do |f| %>
+                <%= f.button :submit, 'Pay', class: 'btn btn-dunker' %>
+              <% end %>
 
-          </form>
         </div>
       </div>
     </div>

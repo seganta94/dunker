@@ -1,11 +1,24 @@
-<div>
-  <% @products.each do |product| %>
-  <%= link_to product_path(product) do %>
-    <div class="card">
-      <h1><%= product.name %></h1>
-      <h3><%= product.price %></h3>
-    </div>
-    <% end %>
-  <% end %>
 
+
+<div class="container">
+
+<h1>My Products</h1>
+
+  <div>
+    <% @products.order('created_at DESC').each do |product| %>
+      <div class="card-product">
+        <img src="<% if product.photo.attached? %>
+          <%= cl_image_path product.photo.key %>
+
+        <% end %>" />
+        <div class="card-product-infos">
+          <h2><%= product.name %></h2>
+          <p><strong><%= number_to_currency(product.price, precision: 2) %></strong></p>
+          <p><%= product.category %> | <%= product.brand %> | <%= product.condition %> |
+
+
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
