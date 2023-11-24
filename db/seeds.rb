@@ -1,6 +1,32 @@
 require 'faker'
 require 'open-uri'
 
+module Faker
+  class SportsItem < Base
+    class << self
+      def sports_item
+        fetch('sports_item.items')
+      end
+    end
+  end
+
+  Faker::Config.add_locale('en-US', {
+    'sports_item' => {
+      'items' => [
+        'Basketball', 'Football', 'Tennis Racket', 'Soccer Ball', 'Baseball Glove',
+        'Golf Clubs', 'Volleyball', 'Hockey Stick', 'Cricket Bat', 'Table Tennis Paddle',
+        'Softball', 'Bowling Ball', 'Badminton Racquet', 'Rugby Ball', 'Boxing Gloves',
+        'Skateboard', 'Snowboard', 'Swimming Goggles', 'Treadmill', 'Yoga Mat',
+        'Dumbbells', 'Bicycle', 'Running Shoes', 'Climbing Harness', 'Frisbee',
+        'Surfboard', 'Roller Skates', 'Paddleboard', 'Jump Rope', 'Kettlebell',
+        'Tennis Shoes', 'Foam Roller', 'Resistance Bands', 'Water Bottle', 'Tennis Ball',
+        'Helmet', 'Basketball Hoop', 'Golf Balls', 'Cycling Helmet', 'Sports Towel',
+        'Gym Bag', 'Wristbands', 'Headband', 'Swim Cap', 'Referee Whistle',
+        'Sports Sunglasses', 'Goalie Gloves'
+      ]
+    }
+  })
+end
 Sale.destroy_all
 User.destroy_all
 Product.destroy_all
@@ -16,35 +42,35 @@ user5 = User.create(first_name: "adriano", last_name: "santos", email: "adriano@
 puts "Seeding products..."
 
 10.times do
-  product = Product.create!(user_id: user.id, name: Faker::Sport.sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
+  product = Product.create!(user_id: user.id, name: Faker::SportsItem.sports_item, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
 
   image_url = "https://source.unsplash.com/400x400/?sports"
   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 end
 
 # 10.times do
-#   product = Product.create!(user_id: user2.id, name: Faker::Sport.sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
+#   product = Product.create!(user_id: user2.id, name: Faker::SportsItem.sports_item, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
 
 #   image_url = "https://source.unsplash.com/400x400/?sports"
 #   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 # end
 
 # 10.times do
-#   product = Product.create!(user_id: user3.id, name: Faker::Sport.sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
+#   product = Product.create!(user_id: user3.id, name: Faker::SportsItem.sports_item, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
 
 #   image_url = "https://source.unsplash.com/400x400/?sports"
 #   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 # end
 
 # 10.times do
-#   product = Product.create!(user_id: user4.id, name: Faker::Sport.sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
+#   product = Product.create!(user_id: user4.id, name: Faker::SportsItem.sports_item, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
 
 #   image_url = "https://source.unsplash.com/400x400/?sports"
 #   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
 # end
 
 # 10.times do
-#   product = Product.create!(user_id: user5.id, name: Faker::Sport.sport, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
+#   product = Product.create!(user_id: user5.id, name: Faker::SportsItem.sports_item, category: Product::CATEGORIES.sample, brand: Product::BRANDS.sample, condition: Product::CONDITION.sample, price: Faker::Commerce.price,description: Faker::Lorem.sentence, sport: Product::SPORTS.sample)
 
 #   image_url = "https://source.unsplash.com/400x400/?sports"
 #   product.photo.attach(io: URI.open(image_url), filename: 'product_image.jpg')
