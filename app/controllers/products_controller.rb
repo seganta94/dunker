@@ -13,10 +13,17 @@ class ProductsController < ApplicationController
   end
 
   def filter
-    @products = Product.all
+    @productscategory = Product.all
       if params[:query].present?
-        @products = @products.where(category: params[:query])
+        @productscategory = @productscategory.where(category: params[:query])
       end
+
+      @products = Product.all
+      if params[:query].present?
+        @products = Product.search_products(params[:query])
+      end
+
+
   end
 
   def user
