@@ -1,11 +1,17 @@
 <%= simple_form_for @product do |f| %>
   <%= f.input :name %>
-  <%= f.input :category, collection: Product::CATEGORIES %>
-  <%= f.input :sport, collection: Product::SPORTS %>
-  <%= f.input :brand, collection: Product::BRANDS %>
-  <%= f.input :condition, collection: Product::CONDITION %>
-  <%= f.input :price %>
+  <div class="inline-inputs">
+    <%= f.input :category, collection: Product::CATEGORIES %>
+    <%= f.input :sport, collection: Product::SPORTS %>
+  </div>
+  <div class="inline-inputs">
+    <%= f.input :brand, collection: Product::BRANDS %>
+    <%= f.input :condition, collection: Product::CONDITION %>
+  </div>
   <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: 'btn-dunker' %>
+  <div class="inline-inputs">
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+  </div>
+  <%= f.button :submit, class: 'btn-dunker mt-2' %>
 <% end %>
