@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   background-color: #fbfbfb;
+  margin-top: -3rem;
 }
 
 .container-edit {
@@ -31,7 +32,7 @@
 // ---------- USER PRODUCT
 .wrapper {
   height: 420px;
-  width: 654px;
+  width: 900px;
   margin: 100px auto;
   border-radius: 7px 7px 7px 7px;
   -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
@@ -41,9 +42,6 @@
 
 .product-img {
   float: left;
-  height: 420px;
-  width: 327px;
-
   background-size: cover;
   display: inline-block;
   background-position: center;
@@ -58,8 +56,8 @@
 
 .product-info {
   float: left;
-  height: 420px;
-  width: 327px;
+  height: 600px;
+  width: 450px;
   border-radius: 0 7px 10px 7px;
   background-color: #ffffff;
   z-index: 1;
@@ -73,19 +71,13 @@
 .product-text h1 {
   margin: 0 0 0 38px;
   padding-top: 52px;
-  font-size: 34px;
+  font-size: 52px;
   color: #474747;
-}
-
-.product-text h1,
-.product-price-btn p {
-  font-family: 'Bentham', serif;
 }
 
 .product-text h2 {
   margin: 0 0 47px 38px;
-  font-size: 13px;
-  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: #d2d2d2;
@@ -95,10 +87,9 @@
 .product-text p {
   height: 125px;
   margin: 0 0 0 38px;
-  font-family: 'Playfair Display', serif;
   color: #8d8d8d;
   line-height: 1.7em;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: lighter;
   overflow: hidden;
 }
@@ -113,8 +104,7 @@
 
 .product-price-btn {
   height: 103px;
-  width: 327px;
-  margin-top: 17px;
+  margin-top: 200px;
   position: relative;
 }
 
@@ -123,28 +113,10 @@
   position: absolute;
   top: -45px;
   height: 50px;
-  font-family: 'Trocchi', serif;
-  margin: 0 0 0 170px;
+  margin: 0 0 0 280px;
   font-size: 28px;
-  font-weight: lighter;
+  font-weight: bold;
   color: #474747;
-}
-
-.update {
-  display: inline-block;
-  position: absolute;
-  top: -320px;
-  height: 50px;
-  margin: 0 0 0 220px;
-  padding: 5px 10px;
-  font-size: 14px;
-}
-
-span {
-  display: inline-block;
-  height: 50px;
-  font-family: 'Suranna', serif;
-  font-size: 34px;
 }
 
 .product-price-btn button {
@@ -156,7 +128,6 @@ span {
   box-sizing: border-box;
   border: transparent;
   border-radius: 60px;
-  font-family: 'Raleway', sans-serif;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -174,4 +145,8 @@ span {
 }
 .product-price-btn button:hover {
   background-color: #f5c492;
+}
+
+.update-item {
+  color: red;
 }

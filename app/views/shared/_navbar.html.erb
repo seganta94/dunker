@@ -10,11 +10,12 @@
 
 
 
-    <div class="d-flex">
+
       <%= form_with url: products_path, method: :get, class: "search-bar" do %>
         <%= text_field_tag :query,
               params[:query],
               class: "form-control",
+              style: "width: 500px",
               placeholder: "Type a keyword"
           %>
         <%= submit_tag "Search", name: "", class:"btn btn-outline-warning" %>
@@ -48,6 +49,6 @@
           <% end %>
         </ul>
       </div>
-    </div>
+
   </div>
 </div>

@@ -8,15 +8,22 @@ class ProductsController < ApplicationController
     @transparent = true
     @products = Product.all
     if params[:query].present?
-      @products = Product.search_products(params[:query])
+      @products = Product.search_by_name_and_category(params[:query])
     end
   end
 
   def filter
-    @products = Product.all
+    @productscategory = Product.all
       if params[:query].present?
-        @products = @products.where(category: params[:query])
+        @productscategory = @productscategory.where(category: params[:query])
       end
+
+      @products = Product.all
+      if params[:query].present?
+        @products = Product.search_products(params[:query])
+      end
+
+
   end
 
   def user

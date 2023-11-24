@@ -1,8 +1,8 @@
-<div class="container-dunker">
-  <div class="wrapper">
+<div>
+  <div class="wrapper d-flex ">
     <div class="product-img">
       <% if @product.photo.attached? %>
-        <%= cl_image_tag @product.photo.key, crop: :fill, height: 420, width: 327 %>
+        <%= cl_image_tag @product.photo.key, crop: :fill, height: 600, width: 450 %>
       <% else %>
         <%= image_tag "https://www.amapa.gov.br/img/noticias/7f77ad34d638c86bc5614e58610ed240.jpg", class: "card-img-top" %>
       <% end %>
@@ -14,9 +14,8 @@
         <p><%=@product.description%></p>
       </div>
       <div class="product-price-btn">
-        <p><span><strong><%= number_to_currency(@product.price, precision: 2) %></strong></span></p>
+        <p><%= number_to_currency(@product.price, precision: 2) %></p>
         <button type="button"><%= link_to 'Add to cart', new_product_sale_path(@product), class: 'btn-primary' %></button>
-        <%= link_to 'Update Item', edit_product_path(@product), class: 'update' %>
       </div>
     </div>
   </div>
