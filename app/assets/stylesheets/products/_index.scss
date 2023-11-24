@@ -1,6 +1,29 @@
 // Import page-specific CSS files here.
 @import "home";
 
+.inline-inputs {
+  display: flex;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1587960184060-aa880aabdd04?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
+  background-color: rgba(255, 255, 255, 0.5); /* 0.5 define a opacidade, você pode ajustar esse valor conforme necessário */
+  background-blend-mode: overlay;
+}
+
+body h1 h2 h3 h4 h5 {
+  font-family: 'Josefin Sans';
+}
+
 .banner {
   position: relative;
   background-size: cover;
@@ -8,11 +31,12 @@
   padding: 150px 0;
   margin-bottom: 30px;
   z-index: 1;
-  height: 50vh;
+  height: 20%;
 }
 
 .banner-text {
-  margin-left: 100px;
+  margin: 90px auto auto 100px;
+
 }
 
 .banner h1 {
@@ -81,6 +105,7 @@
   width: 100%;
   top: 0;
   left: 0;
+  font-family: 'Josefin Sans'
 }
 
 .pack-info h3 {
@@ -104,28 +129,30 @@
 // .card-box {
 //   text-align: center;
 //   position: relative;
-//   background-color: #000;
+//   background-color: rgba(10, 5, 5, 0.5);
+//   width: 180px;
+//   height: 180px;
+//   border-radius: 50%;
+//   overflow: hidden;
 // }
 
-// .card-box img {
-//   background-color: aqua;
+// .card-image {
 //   border-radius: 50%;
-//   width: 150px;
-//   height: 150px;
-//   align-items: center;
-//   margin: auto;
+//   width: 100%;
+//   height: 100%;
 //   object-fit: cover;
 //   transition: opacity 0.3s ease;
+//   opacity: 0;
 // }
 
-// .card-box:hover img {
+// .card-box:hover .card-image {
 //   opacity: 1;
 // }
 
 .card-box {
   text-align: center;
   position: relative;
-  background-color: rgb(10, 5, 5);
+  background-color: rgba(10, 5, 5, 1);
   width: 180px;
   height: 180px;
   border-radius: 50%;
@@ -138,11 +165,11 @@
   height: 100%;
   object-fit: cover;
   transition: opacity 0.3s ease;
-  opacity: 0; /* Inicialmente, a imagem estará invisível */
+  opacity: 0.2; /* Defina a opacidade inicial da imagem para 1 (totalmente visível) */
 }
 
 .card-box:hover .card-image {
-  opacity: 1; /* Ao passar o mouse, a imagem torna-se visível */
+  opacity: 1; /* Quando houver um hover, a opacidade da imagem será 0 (totalmente transparente) */
 }
 
 .sport-info {
@@ -151,4 +178,5 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+  font-family: 'Josefin Sans';
 }

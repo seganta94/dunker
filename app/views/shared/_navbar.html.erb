@@ -8,49 +8,46 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="row">
-      <div class="col-sm-8">
-        <%= form_with url: products_path, method: :get, class: "search-bar" do %>
-          <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Type a keyword"
-            %>
-          <%= submit_tag "Search", name: "", class:"btn btn-outline-warning" %>
-        <% end %>
+
+
+    <div class="d-flex">
+      <%= form_with url: products_path, method: :get, class: "search-bar" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Type a keyword"
+          %>
+        <%= submit_tag "Search", name: "", class:"btn btn-outline-warning" %>
+      <% end %>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <% if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to "Home", products_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Sell a product", new_product_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= image_tag "avatar.svg", class: "avatar", alt: "dropdown menu" %>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Profile", edit_user_registration_path, class: "dropdown-item" %>
+                <%= link_to "My products", user_products_path , class: "dropdown-item" %>
+                <%= link_to "Previous purchases ", sales_path , class: "dropdown-item" %>
+                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            </li>
+          <% end %>
+        </ul>
       </div>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", products_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Sell a product", new_product_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
-            </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Profile", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "My products", user_products_path , class: "dropdown-item" %>
-              <%= link_to "Previous purchases ", sales_path , class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
-      </ul>
     </div>
   </div>
 </div>
