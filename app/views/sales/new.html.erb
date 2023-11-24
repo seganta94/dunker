@@ -1,4 +1,4 @@
-<div>
+<div class="container container-edit">
   <div class="payment-body">
     <div class="model">
       <div class="room" style="background-image: url(<% if @product.photo.attached? %>
@@ -7,7 +7,7 @@
 
         <div class="text-cover">
           <h1><%= @product.name %></h1>
-          <p class="price"><span>$</span> <%=  number_to_currency(@product.price, precision: 2)  %></p>
+          <p class="price"><span></span> <%=  number_to_currency(@product.price, precision: 2)  %></p>
           <hr>
           <p><%= @product.description %></p>
 
@@ -17,15 +17,15 @@
           <h3>Details</h3>
           <table class="table">
             <tr>
-              <td>Category</td>
+              <td>Category:</td>
               <td><%= @product.category %></td>
             </tr>
             <tr>
-              <td>Brand</td>
+              <td>Brand:</td>
               <td><%= @product.brand %></td>
             </tr>
             <tr>
-              <td>Condition</td>
+              <td>Condition:</td>
               <td><%= @product.condition %></td>
             </tr>
             <tr>
@@ -36,7 +36,7 @@
               <tr>
 
                   <td><strong>Total</strong></td>
-                  <td><strong>$ <%= number_to_currency(@product.price, precision: 2) %></strong></td>
+                  <td><strong><%= number_to_currency(@product.price, precision: 2) %></strong></td>
 
               </tr>
             </tfoot>

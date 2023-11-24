@@ -1,8 +1,6 @@
+<div class="container container-edit">
 
-
-<div class="container">
-
-<h1>My Products</h1>
+<h1 class="text-center">My Products</h1>
 
   <div>
     <% @products.order('created_at DESC').each do |product| %>
@@ -14,9 +12,7 @@
         <div class="card-product-infos">
           <h2><%= product.name %></h2>
           <p><strong><%= number_to_currency(product.price, precision: 2) %></strong></p>
-          <p><%= product.category %> | <%= product.brand %> | <%= product.condition %> |
-
-
+          <p><%= product.brand %> | <%= product.category %> | <%= product.condition %> |
         </div>
       </div>
     <% end %>
